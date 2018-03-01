@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.ivanvega.mivolleyperronb.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/colorSecondary"
+    >
+
+
+    <TextView
+
+        android:id="@+id/txtWX"
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/txtHY"
+        android:layout_alignBottom="@+id/txtHY"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:text="Width (px)"
+        android:textColor="@color/colorFont"
+        />
+
+    <EditText
+        android:id="@+id/txtX"
+
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWX"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:ems="10"
+        android:inputType="number"
+
+        android:textColor="@color/colorFont"
+        />
+
+
+
+    <TextView
+        android:layout_marginTop="10px"
+        android:id="@+id/txtHY"
+        android:layout_toRightOf="@+id/txtWX"
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:text="Height (px)"
+
+        android:textColor="@color/colorFont"
+        />
+
+    <EditText
+        android:id="@+id/txtY"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWX"
+        android:layout_toEndOf="@+id/txtWX"
+        android:layout_toRightOf="@+id/txtWX"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+
+        android:textColor="@color/colorFont"
+        />
+
+
+    <Spinner
+        android:id="@+id/spColor"
+        android:layout_width="292dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnPeople"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/imaVie"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="btnGenerar_click"
+        android:text="GENERATE THE IMAGE"
+        android:textColor="@color/colorFont" />
+
+    <ImageView
+        android:id="@+id/imaVie"
+        android:layout_width="310dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/btnGrayScale"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+
+        />
+
+
+    <Button
+        android:id="@+id/btnAnimals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imaVie"
+        android:layout_alignStart="@+id/imaVie"
+        android:layout_below="@+id/textView"
+        android:onClick="btnAnimals_click"
+        android:text="Animals" />
+
+    <Button
+        android:id="@+id/btnArchitecture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPeople"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnArchitecture_click"
+        android:text="Architecture" />
+
+    <Button
+        android:id="@+id/btnNature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPeople"
+        android:layout_alignEnd="@+id/imaVie"
+        android:layout_alignRight="@+id/imaVie"
+        android:onClick="btnNature_click"
+        android:text="Nature"
+
+        />
+
+    <Button
+        android:id="@+id/btnPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAnimals"
+        android:layout_toEndOf="@+id/btnTech"
+        android:layout_toRightOf="@+id/btnTech"
+        android:onClick="btnPeople_click"
+        android:text="People"
+
+        />
+
+    <Button
+        android:id="@+id/btnTech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnPeople"
+        android:layout_alignBottom="@+id/btnPeople"
+        android:layout_alignLeft="@+id/spColor"
+        android:layout_alignStart="@+id/spColor"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:onClick="btnTech_click"
+        android:text="Tech" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtX"
+        android:text="CATEGORIES"
+        android:textColor="@color/colorFont"
+        />
+
+    <Button
+        android:id="@+id/btnGrayScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnSepia"
+        android:layout_alignBottom="@+id/btnSepia"
+        android:layout_alignLeft="@+id/spColor"
+        android:layout_alignStart="@+id/spColor"
+        android:onClick="btnGrayScale_click"
+        android:text="Grayscale" />
+
+    <Button
+        android:id="@+id/btnSepia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/btnGrayScale"
+        android:layout_toRightOf="@+id/btnGrayScale"
+        android:onClick="btnSepia_click"
+        android:text="Sepia" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/spColor"
+        android:text="FILTERS"
+        android:textColor="@color/colorFont"
+        />
+
+
+</RelativeLayout>
